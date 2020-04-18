@@ -1,0 +1,745 @@
+Started GET "/" for ::1 at 2020-04-15 20:28:28 +0530
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "LT-Jyothish-1790" does not exist
+):
+  
+activerecord (5.0.7.2) lib/active_record/connection_adapters/postgresql_adapter.rb:677:in `rescue in connect'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/postgresql_adapter.rb:672:in `connect'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.7.2) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.7.2) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.7.2) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.7.2) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.9ms)
+Started GET "/" for ::1 at 2020-04-18 21:32:56 +0530
+  
+Gem::LoadError (Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  
+activerecord (5.0.7.2) lib/active_record/connection_adapters/connection_specification.rb:176:in `rescue in spec'
+activerecord (5.0.7.2) lib/active_record/connection_adapters/connection_specification.rb:173:in `spec'
+activerecord (5.0.7.2) lib/active_record/connection_handling.rb:53:in `establish_connection'
+activerecord (5.0.7.2) lib/active_record/railtie.rb:125:in `block (2 levels) in <class:Railtie>'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:49:in `each'
+activesupport (5.0.7.2) lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+activerecord (5.0.7.2) lib/active_record/base.rb:324:in `<module:ActiveRecord>'
+activerecord (5.0.7.2) lib/active_record/base.rb:24:in `<top (required)>'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:293:in `require'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:293:in `block in require'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.7.2) lib/active_support/dependencies.rb:293:in `require'
+activerecord (5.0.7.2) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.7.2) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.4ms)
+Started GET "/" for ::1 at 2020-04-18 21:44:34 +0530
+Processing by WidgetsController#index as HTML
+Completed 500 Internal Server Error in 17ms
+
+
+  
+NameError (uninitialized constant ApiExceptions::APIExceptionError):
+  
+app/utilities/api_exceptions.rb:2:in `<module:ApiExceptions>'
+app/utilities/api_exceptions.rb:1:in `<top (required)>'
+app/utilities/widgets_api/v1/client.rb:8:in `<class:Client>'
+app/utilities/widgets_api/v1/client.rb:6:in `<module:V1>'
+app/utilities/widgets_api/v1/client.rb:5:in `<module:WidgetsAPI>'
+app/utilities/widgets_api/v1/client.rb:4:in `<top (required)>'
+app/controllers/application_controller.rb:5:in `api_client'
+app/controllers/widgets_controller.rb:3:in `index'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (129.3ms)
+Started GET "/" for ::1 at 2020-04-18 21:52:17 +0530
+Processing by WidgetsController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+
+  
+ArgumentError (unknown keyword: term):
+  
+app/utilities/widgets_api/v1/client.rb:18:in `visible_widgets'
+app/controllers/widgets_controller.rb:3:in `index'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.0ms)
+Started GET "/" for ::1 at 2020-04-18 21:52:47 +0530
+Processing by WidgetsController#index as HTML
+Completed 500 Internal Server Error in 609564ms
+
+
+  
+NameError (undefined local variable or method `response' for #<WidgetsAPI::V1::Client:0x00007f9ada4e1f70>
+Did you mean?  respond_to?):
+  
+app/utilities/widgets_api/v1/client.rb:66:in `response_successful?'
+app/utilities/widgets_api/v1/client.rb:42:in `request'
+app/utilities/widgets_api/v1/client.rb:19:in `visible_widgets'
+app/controllers/widgets_controller.rb:3:in `index'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.4ms)
+Started GET "/" for ::1 at 2020-04-18 22:06:40 +0530
+Processing by WidgetsController#index as HTML
+Completed 500 Internal Server Error in 2273956ms
+
+
+  
+NameError (undefined local variable or method `response' for #<WidgetsAPI::V1::Client:0x00007ffcc29b1cb8>
+Did you mean?  respond_to?):
+  
+app/utilities/widgets_api/v1/client.rb:66:in `response_successful?'
+app/utilities/widgets_api/v1/client.rb:42:in `request'
+app/utilities/widgets_api/v1/client.rb:19:in `visible_widgets'
+app/controllers/widgets_controller.rb:3:in `index'
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.5ms)
+Started GET "/" for ::1 at 2020-04-18 22:44:47 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 1041ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 22:45:17 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 900ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 22:46:32 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 1160ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 22:49:31 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+Started GET "/" for ::1 at 2020-04-18 23:02:07 +0530
+  Rendered widgets/index.html.haml within layouts/application (47.9ms)
+Completed 500 Internal Server Error in 756235ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 920ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 23:07:00 +0530
+Processing by WidgetsController#index as HTML
+Started GET "/" for ::1 at 2020-04-18 23:19:22 +0530
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 741979ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 1031ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 23:19:52 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 880ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 23:22:35 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 963ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'data target' was rendered):
+Started GET "/" for ::1 at 2020-04-18 23:23:21 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4131ms (Views: 3233.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:41:58 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 984ms
+
+
+  
+ActionView::Template::Error (Invalid attribute name 'aria expanded' was rendered):
+Started GET "/" for ::1 at 2020-04-18 23:42:21 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 966ms (Views: 65.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:43:15 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 1019ms (Views: 53.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:48:45 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 1021ms (Views: 62.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:50:25 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 1094ms (Views: 54.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:50:53 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 978ms (Views: 56.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:52:30 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 1015ms (Views: 41.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:53:49 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 1057ms (Views: 48.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:54:44 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 1430ms (Views: 47.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:55:53 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 986ms (Views: 41.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:56:07 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 930ms (Views: 44.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:56:18 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 1049ms (Views: 36.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:56:32 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 957ms (Views: 37.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-18 23:57:21 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 1004ms (Views: 42.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:07:44 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 1157ms (Views: 140.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:08:03 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 971ms (Views: 56.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:08:59 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 1099ms (Views: 48.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:09:16 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 1074ms (Views: 49.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:09:41 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 940ms (Views: 38.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:10:38 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 992ms (Views: 41.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:10:47 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 962ms (Views: 40.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:10:57 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 885ms (Views: 37.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:11:22 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 944ms (Views: 49.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:12:38 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 961ms (Views: 35.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:13:45 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 930ms (Views: 40.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:14:01 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 973ms (Views: 36.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:14:17 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 915ms (Views: 39.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:14:36 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 890ms (Views: 43.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:14:53 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 938ms (Views: 40.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:15:21 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 986ms (Views: 38.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:16:34 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 941ms (Views: 39.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:18:03 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 1041ms (Views: 50.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:22:16 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 1059ms (Views: 84.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:24:22 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 982ms (Views: 54.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:24:41 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 954ms (Views: 63.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:24:53 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 862ms (Views: 36.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:28:08 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 1004ms (Views: 67.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:28:16 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 894ms (Views: 39.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:28:36 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 1020ms (Views: 35.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:29:26 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 988ms (Views: 44.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:31:36 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 991ms (Views: 48.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:45:09 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 1019ms
+
+
+  
+SyntaxError (/Users/LT-Jyothish-1790/Code/Showoff-Tech-Test/app/views/widgets/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting end-of-input
+Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.u
+                              ^):
+  
+app/views/widgets/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.3ms)
+Started GET "/" for ::1 at 2020-04-19 00:45:28 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 991ms
+
+
+  
+SyntaxError (/Users/LT-Jyothish-1790/Code/Showoff-Tech-Test/app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.u
+                              ^):
+  
+app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.9ms)
+Started GET "/" for ::1 at 2020-04-19 00:45:51 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 887ms
+
+
+  
+SyntaxError (/Users/LT-Jyothish-1790/Code/Showoff-Tech-Test/app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.u
+                              ^):
+  
+app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.4ms)
+Started GET "/" for ::1 at 2020-04-19 00:48:14 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 1043ms
+
+
+  
+SyntaxError (/Users/LT-Jyothish-1790/Code/Showoff-Tech-Test/app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/widgets/index.html.haml:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LT-Jyothish-1790/.rvm/gems/ruby-2.4.6/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.2ms)
+Started GET "/" for ::1 at 2020-04-19 00:48:46 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 1077ms (Views: 54.1ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&commit=Search" for ::1 at 2020-04-19 00:49:10 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Search"}
+  Rendering widgets/index.html.haml
+  Rendered widgets/index.html.haml (4.2ms)
+Completed 200 OK in 911ms (Views: 14.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:49:46 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 1000ms (Views: 51.1ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&q=A+Visible+Widget&commit=Search" for ::1 at 2020-04-19 00:49:53 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>"A Visible Widget", "commit"=>"Search"}
+  Rendering widgets/index.html.haml
+  Rendered widgets/index.html.haml (4.9ms)
+Completed 200 OK in 971ms (Views: 14.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-19 00:55:51 +0530
+Processing by WidgetsController#index as HTML
+  Rendering widgets/index.html.haml within layouts/application
+  Rendered widgets/_widgets.html.haml (2.8ms)
+  Rendered widgets/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 1022ms (Views: 54.3ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&q=Widget+23234&commit=Search" for ::1 at 2020-04-19 00:56:01 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>"Widget 23234", "commit"=>"Search"}
+  Rendering widgets/index.js.erb
+  Rendered widgets/_widgets.html.haml (2.7ms)
+  Rendered widgets/index.js.erb (6.8ms)
+Completed 200 OK in 859ms (Views: 17.5ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&q=Widget&commit=Search" for ::1 at 2020-04-19 00:56:19 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>"Widget", "commit"=>"Search"}
+  Rendering widgets/index.js.erb
+  Rendered widgets/_widgets.html.haml (6.9ms)
+  Rendered widgets/index.js.erb (10.1ms)
+Completed 200 OK in 995ms (Views: 18.2ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&q=A+Visible+&commit=Search" for ::1 at 2020-04-19 00:56:34 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>"A Visible ", "commit"=>"Search"}
+  Rendering widgets/index.js.erb
+  Rendered widgets/_widgets.html.haml (2.6ms)
+  Rendered widgets/index.js.erb (6.0ms)
+Completed 200 OK in 939ms (Views: 15.7ms)
+
+
+Started GET "/widgets?utf8=%E2%9C%93&q=&commit=Search" for ::1 at 2020-04-19 00:56:58 +0530
+Processing by WidgetsController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>"", "commit"=>"Search"}
+  Rendering widgets/index.js.erb
+  Rendered widgets/_widgets.html.haml (2.5ms)
+  Rendered widgets/index.js.erb (5.7ms)
+Completed 200 OK in 892ms (Views: 14.8ms)
+
+

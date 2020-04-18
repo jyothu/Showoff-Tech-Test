@@ -5,11 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#  RAILS  #
+#---------#
+gem 'rails', '~> 5.0.7.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -37,7 +35,16 @@ gem 'jbuilder', '~> 2.5'
 
 gem "bulma-rails", "~> 0.8.0"
 gem "haml-rails"
-gem 'rest-client'
+
+# API CLIENT
+gem 'faraday'
+gem 'oj'
+
+# STORAGE
+gem 'redis'
+
+# ENV
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

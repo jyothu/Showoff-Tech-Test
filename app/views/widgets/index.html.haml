@@ -1,0 +1,12 @@
+.level
+  .level-left
+  .level-right
+    = form_tag("/widgets", method: 'get', remote: true) do
+      .field.has-addons.level-item
+        .control
+          %input.input{ placeholder: "Type Widget Name", type: 'text', name: 'q' }
+        .control
+          = submit_tag "Search", class: "button is-warning"
+
+#widgets-list
+  = render 'widgets'
