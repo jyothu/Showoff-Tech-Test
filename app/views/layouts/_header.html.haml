@@ -8,8 +8,12 @@
       %span{ "aria-hidden": "true" }
   #navbar-home.navbar-menu
     .navbar-start
-      %a.navbar-item
+      %a.navbar-item{ href: '/' }
         Home
+      - if user_logged_in?
+        %a.navbar-item{ href: users_me_widgets_path }
+          My Widgets
+
     .navbar-end
       - unless user_logged_in?
         .navbar-item

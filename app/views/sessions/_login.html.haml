@@ -5,7 +5,8 @@
       .form-header-icon.has-text-centered
         %span
           %i.fa.fa-user-circle.fa-3x.has-text-grey-lighter{ 'aria-hidden' => 'true' }
-      #errors-list
+
+      #login-form-errors.level
 
       = form_tag(sessions_path, remote: true) do
         .field

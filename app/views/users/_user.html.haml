@@ -1,0 +1,39 @@
+%table.table.is-fullwidth
+  %tr
+    %th ID
+    %td= @user['id']
+  %tr
+    %th Name
+    %td= @user['name']
+
+  - if @user.has_key?('email')
+    %tr
+      %th Email
+      %td= @user['email']
+  %tr
+    %th First Name
+    %td= @user['first_name']
+  %tr
+    %th Last Name
+    %td= @user['last_name']
+
+  - if @user.has_key?('date_of_birth')
+    %tr
+      %th Date Of Birth
+      %td= @user['date_of_birth']
+
+  - if @user.has_key?('active')
+    %tr
+      %th Active?
+      %td= @user['active'] ? 'Yes' : 'No'
+  %tr
+    %th Image
+    %td
+      %figure.image.is-64x64
+        %img{ src: @user.dig('images', 'original_url') }
+
+.level.has-text-right
+  - if @user.has_key?('email')
+    = render 'edit'
+    %a.button.is-small.is-info.modal-trigger-button{ 'data-target': "edit-user-modal" }
+      %strong Edit

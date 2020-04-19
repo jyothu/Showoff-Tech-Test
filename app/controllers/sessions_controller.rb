@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
   end
 
   def redis_params(response)
-    token = response['data']['token'].slice('access_token', 'token_type', 'expires_in', 'refresh_token')
+    token = response.dig('data', 'token').slice('access_token', 'token_type', 'expires_in', 'refresh_token')
     { 'email': permitted_params[:username] }.merge(token)
   end
 

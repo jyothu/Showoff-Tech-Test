@@ -1,0 +1,3 @@
+<% if @error.present? %>
+  $('#edit-user-form-errors').html("<%= j (render 'layouts/alert', message: @error) %>");
+<% end %>

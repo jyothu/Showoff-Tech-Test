@@ -24,10 +24,33 @@ module WidgetsAPI
         )
       end
 
+      def user_widgets(search_term: nil)
+        request(
+          http_method: :get,
+          endpoint: "api/v1/users/me/widgets",
+          params: { term: search_term },
+        )
+      end
+
       def get_user(id)
         request(
           http_method: :get,
           endpoint: "api/v1/users/#{id}",
+        )
+      end
+
+      def my_profile
+        request(
+          http_method: :get,
+          endpoint: 'api/v1/users/me',
+        )
+      end
+
+      def update_profile(params)
+        request(
+          http_method: :put,
+          endpoint: 'api/v1/users/me',
+          params: params
         )
       end
 

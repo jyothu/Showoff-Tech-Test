@@ -1,0 +1,35 @@
+#edit-user-modal.modal
+  .modal-background
+  .modal-content
+    .box
+      .form-header-icon.has-text-centered
+        %span
+          %i.fa.fa-user-circle.has-text-grey-lighter.fa-3x{ 'aria-hidden' => 'true' }
+
+      #edit-user-form-errors.level
+
+      = form_tag(update_profile_users_path, method: :put, remote: true) do
+        .field
+          %p.control.has-icons-left.has-icons-right
+            %input.input.is-medium{ placeholder: 'First Name', type: 'text', name: 'first_name', value: @user['first_name'], required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-user
+            %span.icon.is-small.is-right
+              %i.fa.fa-check
+        .field
+          %p.control.has-icons-left.has-icons-right
+            %input.input.is-medium{ placeholder: 'Last Name', type: 'text', name: 'last_name', value: @user['last_name'], required: true}
+            %span.icon.is-small.is-left
+              %i.fa.fa-user
+            %span.icon.is-small.is-right
+              %i.fa.fa-check
+        .field
+          %p.control.has-icons-left
+            %input.input.is-medium{ placeholder: 'Date of birth', type: 'date', name: 'date_of_birth', value: @user['date_of_birth'], required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-lock
+        .field
+          %p.control.has-text-right
+            = submit_tag "Update", class: "button is-success is-medium"
+
+  %button.modal-close.is-medium{ 'aria-label' => 'close' }

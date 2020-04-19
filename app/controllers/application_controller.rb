@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def api_client
   	@api_client ||= if user_logged_in?
-      WidgetsAPI::V1::Client.new(access_token: current_user['access_token'], token_type: current_user[:token_type])
+      WidgetsAPI::V1::Client.new(access_token: current_user['access_token'], token_type: current_user['token_type'])
     else
       WidgetsAPI::V1::Client.new
     end

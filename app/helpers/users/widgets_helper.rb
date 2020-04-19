@@ -1,0 +1,2 @@
+module Users::WidgetsHelper
+end

@@ -1,6 +1,3 @@
 <% if @error.present? %>
-  $('#errors-list').html("<%= j (render 'layouts/alert', message: @error) %>");
-<% else %>
-  debugger
-  $('#signup-modal').removeClass('is-active');
+  $('#signup-form-errors').html("<%= j (render 'layouts/alert', message: @error) %>");
 <% end %>
