@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  resources :users do
+  	collection do
+  	  get :me
+  	end
+  end
 
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  resources :users
   resources :widgets
+  resources :sessions
 
   root 'widgets#index'
 end

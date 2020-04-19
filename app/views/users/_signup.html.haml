@@ -4,41 +4,43 @@
     .box
       .form-header-icon.has-text-centered
         %span
-          %i.fa.fa-user-circle.has-text-grey-lighter.fa-3x{ "aria-hidden" => "true" }
-      .field
-        %p.control.has-icons-left.has-icons-right
-          %input.input.is-medium{ placeholder: "Email", type: "email" }
-          %span.icon.is-small.is-left
-            %i.fa.fa-envelope
-          %span.icon.is-small.is-right
-            %i.fa.fa-check
-      .field
-        %p.control.has-icons-left.has-icons-right
-          %input.input.is-medium{ placeholder: "First Name", type: "text" }
-          %span.icon.is-small.is-left
-            %i.fa.fa-user
-          %span.icon.is-small.is-right
-            %i.fa.fa-check
-      .field
-        %p.control.has-icons-left.has-icons-right
-          %input.input.is-medium{ placeholder: "Last Name", type: "text" }
-          %span.icon.is-small.is-left
-            %i.fa.fa-user
-          %span.icon.is-small.is-right
-            %i.fa.fa-check
-      .field
-        %p.control.has-icons-left
-          %input.input.is-medium{ placeholder: "Password", type: "password", name: 'password' }
-          %span.icon.is-small.is-left
-            %i.fa.fa-lock
-      .field
-        %p.control.has-icons-left
-          %input.input.is-medium{ placeholder: "Retype Password", type: "password", name: 'password_confirmation'}
-          %span.icon.is-small.is-left
-            %i.fa.fa-lock
-      .field
-        %p.control.has-text-right
-          %button.button.is-success.is-medium
-            Sign Up
+          %i.fa.fa-user-circle.has-text-grey-lighter.fa-3x{ 'aria-hidden' => 'true' }
+      #errors-list
 
-  %button.modal-close.is-medium{ 'aria-label' => "close" }
+      = form_tag(users_path, remote: true) do
+        .field
+          %p.control.has-icons-left.has-icons-right
+            %input.input.is-medium{ placeholder: 'Email', type: 'email', name: 'email', required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-envelope
+            %span.icon.is-small.is-right
+              %i.fa.fa-check
+        .field
+          %p.control.has-icons-left.has-icons-right
+            %input.input.is-medium{ placeholder: 'First Name', type: 'text', name: 'first_name', required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-user
+            %span.icon.is-small.is-right
+              %i.fa.fa-check
+        .field
+          %p.control.has-icons-left.has-icons-right
+            %input.input.is-medium{ placeholder: 'Last Name', type: 'text', name: 'last_name', required: true}
+            %span.icon.is-small.is-left
+              %i.fa.fa-user
+            %span.icon.is-small.is-right
+              %i.fa.fa-check
+        .field
+          %p.control.has-icons-left
+            %input.input.is-medium{ placeholder: 'Password', type: 'password', name: 'password', required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-lock
+        .field
+          %p.control.has-icons-left
+            %input.input.is-medium{ placeholder: 'Retype Password', type: 'password', name: 'password_confirmation', required: true }
+            %span.icon.is-small.is-left
+              %i.fa.fa-lock
+        .field
+          %p.control.has-text-right
+            = submit_tag "Sign Up", class: "button is-success is-medium"
+
+  %button.modal-close.is-medium{ 'aria-label' => 'close' }

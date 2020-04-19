@@ -1,0 +1,31 @@
+%nav.navbar.is-fixed-top.is-light{"aria-label": "main navigation",  role: "navigation"}
+  .navbar-brand
+    %a.navbar-item{ href: "/"}
+      %span.is-size-4.has-text-weight-bold WIDGETS
+    %a.navbar-burger.burger{ "aria-expanded": "false", "aria-label": "menu", "data-target": "navbar-home",  role: "button" }
+      %span{ "aria-hidden": "true" }
+      %span{ "aria-hidden": "true" }
+      %span{ "aria-hidden": "true" }
+  #navbar-home.navbar-menu
+    .navbar-start
+      %a.navbar-item
+        Home
+    .navbar-end
+      - unless user_logged_in?
+        .navbar-item
+          .buttons
+            %a.button.is-small.is-primary.modal-trigger-button{ 'data-target': "signup-modal" }
+              %strong Sign up
+            %a.button.is-small.is-info.modal-trigger-button{ 'data-target': "login-modal" }
+              %strong Log in
+      - if user_logged_in?
+        .navbar-item.has-dropdown.is-hoverable
+          %a.navbar-link
+            = current_user['name']
+          .navbar-dropdown
+            %a.navbar-item{ href: me_users_path }
+              Manage Profile
+            %a.navbar-item.modal-trigger-button{ 'data-target': "change-password-modal" }
+              Change Password
+            %hr.navbar-divider
+            = link_to "Log out", sessions_path, method: :delete, class: 'navbar-item'

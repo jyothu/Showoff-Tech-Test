@@ -9,17 +9,41 @@ module WidgetsAPI
 
       API_ENDPOINT = 'https://showoff-rails-react-production.herokuapp.com'.freeze
 
-      attr_reader :access_token, :response
+      attr_reader :access_token, :token_type, :response
 
-      def initialize(access_token = nil)
+      def initialize(access_token: nil, token_type: nil)
         @access_token = access_token
+        @token_type = token_type
       end
 
       def visible_widgets(search_term: nil)
         request(
           http_method: :get,
           endpoint: "api/v1/widgets/visible",
-          params: { term: search_term }
+          params: { term: search_term },
+        )
+      end
+
+      def get_user(id)
+        request(
+          http_method: :get,
+          endpoint: "api/v1/users/#{id}",
+        )
+      end
+
+      def create_user(params)
+        request(
+          http_method: :post,
+          endpoint: 'api/v1/users',
+          params: params
+        )
+      end
+
+      def authenticate(params)
+        request(
+          http_method: :post,
+          endpoint: 'oauth/token',
+          params: params
         )
       end
 
@@ -29,7 +53,7 @@ module WidgetsAPI
         @client ||= Faraday.new(API_ENDPOINT) do |client|
           client.request :url_encoded
           client.adapter Faraday.default_adapter
-          client.headers['Authorization'] = "Bearer #{access_token}" if access_token.present?
+          client.headers['Authorization'] = "#{token_type} #{access_token}" if access_token.present?
         end
       end
 
@@ -39,7 +63,7 @@ module WidgetsAPI
 
         return parsed_response if response_successful?
 
-        raise error_class, "Code: #{response.status}, response: #{response.body}"
+        raise error_class, parsed_response['message']
       end
 
       def error_class

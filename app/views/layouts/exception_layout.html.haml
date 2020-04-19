@@ -2,19 +2,12 @@
 %html
   %head
     %meta{ content: "text/html; charset=UTF-8", "http-equiv": "Content-Type" }
-    %title Widgets API
+    %title API Error
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-  %body.has-navbar-fixed-top
-    = render 'layouts/header'
+  %body
     %section.section
       .container
-        = render 'layouts/alert', message: ''
-        = render 'sessions/login'
-        = render 'users/signup'
-        = render 'users/change_password'
-        = render 'users/reset_password'
         = yield
-

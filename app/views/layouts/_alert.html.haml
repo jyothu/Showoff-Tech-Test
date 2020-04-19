@@ -1,5 +1,9 @@
 - flash.each do |type, message|
-  .message-body{ class: "is-#{type}" }
-    .has-text-right
-      %button.delete{ "aria-label" => "delete" }
-    = message
+  .message{ class: "is-#{type}" }
+    .message-body
+      = message
+
+- if message.present?
+  .message.is-danger
+    .message-body
+      = message
