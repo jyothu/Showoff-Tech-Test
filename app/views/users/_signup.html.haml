@@ -1,0 +1,44 @@
+#signup-modal.modal
+  .modal-background
+  .modal-content
+    .box
+      .form-header-icon.has-text-centered
+        %span
+          %i.fa.fa-user-circle.has-text-grey-lighter.fa-3x{ "aria-hidden" => "true" }
+      .field
+        %p.control.has-icons-left.has-icons-right
+          %input.input.is-medium{ placeholder: "Email", type: "email" }
+          %span.icon.is-small.is-left
+            %i.fa.fa-envelope
+          %span.icon.is-small.is-right
+            %i.fa.fa-check
+      .field
+        %p.control.has-icons-left.has-icons-right
+          %input.input.is-medium{ placeholder: "First Name", type: "text" }
+          %span.icon.is-small.is-left
+            %i.fa.fa-user
+          %span.icon.is-small.is-right
+            %i.fa.fa-check
+      .field
+        %p.control.has-icons-left.has-icons-right
+          %input.input.is-medium{ placeholder: "Last Name", type: "text" }
+          %span.icon.is-small.is-left
+            %i.fa.fa-user
+          %span.icon.is-small.is-right
+            %i.fa.fa-check
+      .field
+        %p.control.has-icons-left
+          %input.input.is-medium{ placeholder: "Password", type: "password", name: 'password' }
+          %span.icon.is-small.is-left
+            %i.fa.fa-lock
+      .field
+        %p.control.has-icons-left
+          %input.input.is-medium{ placeholder: "Retype Password", type: "password", name: 'password_confirmation'}
+          %span.icon.is-small.is-left
+            %i.fa.fa-lock
+      .field
+        %p.control.has-text-right
+          %button.button.is-success.is-medium
+            Sign Up
+
+  %button.modal-close.is-medium{ 'aria-label' => "close" }

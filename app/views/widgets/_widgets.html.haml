@@ -13,4 +13,4 @@
         %td=widget['name']
         %td=widget['description']
         %td=widget['kind'] == 'visible' ? 'YES' : 'NO'
-        %td=widget['user']['name']
+        %td= link_to widget['user']['name'], user_path(widget['user']['id']), target: :_blank

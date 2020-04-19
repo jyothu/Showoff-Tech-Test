@@ -25,11 +25,28 @@
         .navbar-end
           .navbar-item
             .buttons
-              %a.button.is-small.is-primary
+              %a.button.is-small.is-primary.modal-trigger-button{ 'data-target': "signup-modal" }
                 %strong Sign up
-              %a.button.is-small.is-info
+              %a.button.is-small.is-info.modal-trigger-button{ 'data-target': "login-modal" }
                 %strong Log in
+          .navbar-item.has-dropdown.is-hoverable
+            %a.navbar-link
+              Jyothish Kumar
+            .navbar-dropdown
+              %a.navbar-item
+                Manage Profile
+              %a.navbar-item.modal-trigger-button{ 'data-target': "change-password-modal" }
+                Change Password
+              %hr.navbar-divider
+              %a.navbar-item
+                Logout
+
     %section.section
       .container
+        = render 'layouts/alert'
+        = render 'sessions/login'
+        = render 'users/signup'
+        = render 'users/change_password'
+        = render 'users/reset_password'
         = yield
 

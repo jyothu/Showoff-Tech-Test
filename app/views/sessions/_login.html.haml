@@ -1,0 +1,28 @@
+#login-modal.modal
+  .modal-background
+  .modal-content
+    .box
+      .form-header-icon.has-text-centered
+        %span
+          %i.fa.fa-user-circle.fa-3x.has-text-grey-lighter{ "aria-hidden" => "true" }
+      .field
+        %p.control.has-icons-left.has-icons-right
+          %input.input.is-medium{ placeholder: "Email", type: "email" }
+          %span.icon.is-small.is-left
+            %i.fa.fa-envelope
+          %span.icon.is-small.is-right
+            %i.fa.fa-check
+      .field
+        %p.control.has-icons-left
+          %input.input.is-medium{ placeholder: "Password", type: "password" }
+          %span.icon.is-small.is-left
+            %i.fa.fa-lock
+      .field.level
+        .level-left
+          %a.level-item.modal-trigger-button{ 'data-target': "reset-password-modal" }
+            Forgot Password?
+        .level-right
+          %button.level-item.button.is-info.is-medium
+            Login
+
+  %button.modal-close.is-medium{ 'aria-label' => "close" }
