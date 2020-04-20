@@ -1,6 +1,10 @@
 module Authenticatable
   extend ActiveSupport::Concern
 
+  included do
+    helper_method :current_user, :user_logged_in?
+  end
+
   def current_user
     return unless user_logged_in?
 
@@ -19,7 +23,7 @@ module Authenticatable
 
   def sign_out
     begin
-      api_client.revoke_token(revoke_params)
+      api_client.revoke_token(revoke_params) if current_user.present?
       session[:user_email] = nil
       flash[:info] = 'Logged out!'
     rescue => e
@@ -29,7 +33,10 @@ module Authenticatable
 
   def api_client
   	@api_client ||= if user_logged_in?
-      WidgetsAPI::V1::Client.new(access_token: current_user['access_token'], token_type: current_user['token_type'])
+      WidgetsAPI::V1::Client.new(
+        access_token: current_user['access_token'],
+        token_type: current_user['token_type'],
+      )
     else
       WidgetsAPI::V1::Client.new
     end
