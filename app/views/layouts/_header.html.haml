@@ -1,6 +1,6 @@
 %nav.navbar.is-fixed-top.is-light{"aria-label": "main navigation",  role: "navigation"}
   .navbar-brand
-    %a.navbar-item{ href: "/"}
+    %a.navbar-item{ href: root_path }
       %span.is-size-4.has-text-weight-bold WIDGETS
     %a.navbar-burger.burger{ "aria-expanded": "false", "aria-label": "menu", "data-target": "navbar-home",  role: "button" }
       %span{ "aria-hidden": "true" }
@@ -8,7 +8,7 @@
       %span{ "aria-hidden": "true" }
   #navbar-home.navbar-menu
     .navbar-start
-      %a.navbar-item{ href: '/' }
+      %a.navbar-item{ href: root_path }
         Home
       - if user_logged_in?
         %a.navbar-item{ href: users_me_widgets_path }
@@ -32,4 +32,4 @@
             %a.navbar-item.modal-trigger-button{ 'data-target': "change-password-modal" }
               Change Password
             %hr.navbar-divider
-            = link_to "Log out", sessions_path, method: :delete, class: 'navbar-item'
+            = link_to "Log out", session_path(current_user['id']), method: :delete, class: 'navbar-item'

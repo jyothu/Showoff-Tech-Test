@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :danger, :warning
   helper_method :current_user, :user_logged_in?
 
-  rescue_from Faraday::ConnectionFailed, with: :no_network
-  rescue_from ApiExceptions::UnauthorizedError, with: :render_422
+  include ExceptionHandler
 
   def api_client
   	@api_client ||= if user_logged_in?
@@ -27,18 +26,16 @@ class ApplicationController < ActionController::Base
   def sign_in(user)
     return if user.blank?
 
-    byebug
-
     session[:user_email] = user['email'] || user[:email]
   end
 
   def sign_out
     begin
-      api_client.revoke(revoke_params)
+      api_client.revoke_token(revoke_params)
       session[:user_email] = nil
-      flash.now[:info] = 'Logged out!'
+      flash[:info] = 'Logged out!'
     rescue => e
-      flash.now[:danger] = e.message
+      flash[:danger] = e.message
     end
   end
 
@@ -46,15 +43,5 @@ class ApplicationController < ActionController::Base
 
   def revoke_params
     { token: current_user['access_token'] }
-  end
-
-  def no_network(exception)
-    @exception = 'Please check your connectivity. Seems like you are not connected to internet'
-    render 'layouts/no_network.html.haml', layout: 'exception_layout'
-  end
-
-  def render_422(exception)
-    # sign_out
-    redirect_to root_path, warning: exception
   end
 end

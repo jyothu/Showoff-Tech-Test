@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :users, only: [:index, :show] do
+  resources :users, only: [:index, :show, :create] do
   	collection do
       get :me
   	  put :update_profile
