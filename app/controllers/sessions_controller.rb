@@ -1,21 +1,18 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
   def create
     begin
       response = api_client.authenticate(create_params)
       User.create(redis_params(response))
       sign_in({ 'email': permitted_params[:username] })
-      redirect_to root_url, info: "Logged in!"
+      redirect_to root_url, info: 'Logged in!'
     rescue => e
       @error = e.message
     end
   end
 
   def destroy
-    session[:user_email] = nil
-    redirect_to root_url, info: "Logged out!"
+    sign_out
+    redirect_to root_url
   end
 
   private

@@ -33,10 +33,20 @@ class ApplicationController < ActionController::Base
   end
 
   def sign_out
-    session[:user_email] = nil
+    begin
+      api_client.revoke(revoke_params)
+      session[:user_email] = nil
+      flash.now[:info] = 'Logged out!'
+    rescue => e
+      flash.now[:danger] = e.message
+    end
   end
 
   private
+
+  def revoke_params
+    { token: current_user['access_token'] }
+  end
 
   def no_network(exception)
     @exception = 'Please check your connectivity. Seems like you are not connected to internet'

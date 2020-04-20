@@ -1,0 +1,3 @@
+<% if @error.present? %>
+  $('#widget-form-errors').html("<%= j (render 'layouts/alert', message: @error) %>");
+<% end %>

@@ -1,3 +1,5 @@
+- destroyable = page == 'users'
+
 %table.table.is-fullwidth.card
   %thead
     %tr
@@ -5,12 +7,24 @@
       %th Name
       %th Description
       %th Visible?
-      %th User Name
+      - if destroyable
+        %th
+      - else
+        %th User Name
   %tbody
+    - if @widgets.blank?
+      %tr
+        %td{ colspan: 5 }
+          .title.has-text-grey.has-text-centered
+            No Widgets Found
+
     - @widgets.each do |widget|
       %tr
         %td=widget['id']
         %td=widget['name']
         %td=widget['description']
         %td=widget['kind'] == 'visible' ? 'YES' : 'NO'
-        %td= link_to widget['user']['name'], user_path(widget['user']['id']), target: :_blank
+        - if destroyable
+          %td= link_to 'Delete', widget_path(widget['id']), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-danger'
+        - else
+          %td= link_to widget['user']['name'], user_path(widget['user']['id']), target: :_blank

@@ -1,0 +1,29 @@
+#widget-form-modal.modal
+  .modal-background
+  .modal-content
+    .box
+      .form-header-icon.has-text-centered
+        %span.is-size-5 Create Widget
+
+      #widget-form-errors.level
+
+      = form_tag(widgets_path, remote: true) do
+        .field
+          %p.control
+            %input.input.is-medium{ placeholder: 'Name', type: 'text', name: 'name', required: true }
+        .field
+          %p.control
+            %textarea.input.is-medium.textarea{ placeholder: 'Description', name: 'description', required: true }
+        .field
+          %p.control
+            %label.radio
+              %input{ name: "kind", type: "radio", value: 'visible', required: true }
+              Visible
+            %label.radio
+              %input{ name: "kind", type: "radio", value: 'hidden', required: true }
+              Hidden
+        .field
+          %p.control.has-text-right
+            = submit_tag "Create", class: "button is-success is-medium"
+
+  %button.modal-close.is-medium{ 'aria-label' => 'close' }

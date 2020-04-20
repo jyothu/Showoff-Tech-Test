@@ -1,5 +1,9 @@
 .level.has-text-right
   .level-left
+    %a.button.is-small.is-warning.modal-trigger-button{ 'data-target': "widget-form-modal" }
+      %strong Create Widget
+    = render 'form'
+
   .level-right
     = form_tag("/users/me/widgets", method: 'get', remote: true) do
       .field.has-addons.level-item
@@ -9,4 +13,4 @@
           = submit_tag "Search", class: "button is-warning"
 
 #widgets-list
-  = render 'widgets'
+  = render 'widgets', page: 'users'
