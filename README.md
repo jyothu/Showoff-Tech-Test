@@ -12,10 +12,8 @@
   - MacOS/Linux
   - Redis
 * No Databases used. Use Redis instead
-
-* Setup Locally
   > `brew install redis`
-  
+* Setup Locally
   > `git clone git@github.com:jyothu/Showoff-Tech-Test.git`
 
   > `cd Showoff-Tech-Test`
