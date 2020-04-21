@@ -14,12 +14,15 @@
 * No Databases used. Use Redis instead
 
 * Setup Locally
-
+  > `brew install redis`
+  
   > `git clone git@github.com:jyothu/Showoff-Tech-Test.git`
 
   > `cd Showoff-Tech-Test`
 
   > `bundle`
+  
+  > `redis-server`
 
   > `bundle exec rails s`
 
